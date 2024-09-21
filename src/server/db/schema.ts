@@ -3,11 +3,11 @@
 
 import { sql } from "drizzle-orm";
 import {
-  index,
   pgTableCreator,
   serial,
   timestamp,
-  varchar,
+  text,
+  boolean,
 } from "drizzle-orm/pg-core";
 
 /**
@@ -18,19 +18,18 @@ import {
  */
 export const createTable = pgTableCreator((name) => `task-tackler-website_${name}`);
 
-export const posts = createTable(
-  "post",
+export const userData = createTable(
+  "userData",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    stripeId: text("stripe_id"),
+    clerkId: text("clerk_id"),
+    paymentByPass: boolean("payment_by_pass").default(false),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
       () => new Date()
     ),
-  },
-  (example) => ({
-    nameIndex: index("name_idx").on(example.name),
-  })
+  }
 );

@@ -1,3 +1,5 @@
+"use client";
+
 import { LuDownload } from "react-icons/lu";
 import { Button } from "~/components/ui/button";
 import { Spotlight } from "~/components/ui/spotlight";
@@ -18,6 +20,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { GiBroom } from "react-icons/gi";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import NavBar from "~/components/custom/nav-bar";
 
 export default function Page() {
   const featuresData = {
@@ -83,23 +86,7 @@ export default function Page() {
 
   return (
     <div className="h-screen w-screen overflow-auto relative">
-      <div className="absolute md:fixed top-0 right-0 w-full h-fit flex justify-between p-4 backdro-blur-xl z-30">
-        <div className="flex flex-row items-center gap-4">
-          <ModeToggle />
-          <div className="hidden md:block">Task Tackler</div>
-        </div>
-        <div className="flex flex-row items-center gap-4">
-          <Button variant={"outline"}>Docs</Button>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton>
-              <Button>Sign In</Button>
-            </SignInButton>
-          </SignedOut>
-        </div>
-      </div>
+      <NavBar />
 
       <div className="flex h-screen w-full items-center justify-center antialiased">
         <Spotlight className="absolute -top-40 left-0 z-10 md:-top-20 md:left-60" />
