@@ -3,7 +3,6 @@
 import { LuDownload } from "react-icons/lu";
 import { Button } from "~/components/ui/button";
 import { Spotlight } from "~/components/ui/spotlight";
-import { ModeToggle } from "~/components/ui/theme-toggle";
 import {
   BookCheckIcon,
   BookDown,
@@ -19,7 +18,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { GiBroom } from "react-icons/gi";
 import Link from "next/link";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import NavBar from "~/components/custom/nav-bar";
 
 export default function Page() {
