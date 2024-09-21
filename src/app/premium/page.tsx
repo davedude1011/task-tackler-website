@@ -17,7 +17,7 @@ export default function Page() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     null as Record<string, any>[] | null,
   );
-  const [isPaymentByPass, setIsPaymentByPass] = useState(true);
+  const [isPaymentByPass, setIsPaymentByPass] = useState(false);
   useEffect(() => {
     isSubscriptionByPassed()
       .then((response) => {
