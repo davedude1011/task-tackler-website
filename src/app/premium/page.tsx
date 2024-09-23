@@ -114,9 +114,9 @@ export default function Page() {
                 {[
                   "Sparx Maths",
                   "Educake",
-                  "Bedrock",
-                  "Know-It-All-Ninja",
-                  "Seneca",
+                  //"Bedrock",
+                  //"Know-It-All-Ninja",
+                  //"Seneca",
                 ].map((siteName) => (
                   <div
                     key={siteName}
@@ -147,9 +147,9 @@ export default function Page() {
                 {[
                   "Sparx Maths",
                   "Educake",
-                  "Bedrock",
-                  "Know-It-All-Ninja",
-                  "Seneca",
+                  //"Bedrock",
+                  //"Know-It-All-Ninja",
+                  //"Seneca",
                 ].map((siteName) => (
                   <div
                     key={siteName}

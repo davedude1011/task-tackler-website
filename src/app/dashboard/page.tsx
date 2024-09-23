@@ -5,6 +5,7 @@ import { Button } from "~/components/ui/button";
 import { getUserData } from "~/server/userData";
 import { onRecieveMessage, sendMessage } from "./communication";
 import NavBar from "~/components/custom/nav-bar";
+import { SparxGraph } from "~/components/custom/sparx-graph";
 
 export default function Page() {
   const [userData, setUserData] = useState(
