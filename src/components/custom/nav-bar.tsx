@@ -15,13 +15,30 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="flex flex-row items-center gap-4">
+        <Link href={"/dashboard"}>
+          <Button variant={"default"}>Dashboard</Button>
+        </Link>
+        {/*<Button variant={"outline"}>Docs</Button>*/}
+
+        <Button
+          onClick={() =>
+            window.open("https://github.com/davedude1011/taskTackler/issues")
+          }
+          variant={"destructive"}
+        >
+          Report Issues
+        </Button>
+        <Button
+          onClick={() =>
+            window.open("https://github.com/davedude1011/taskTackler")
+          }
+          variant={"outline"}
+        >
+          Github
+        </Button>
         <Link href={"/premium"}>
           <Button variant={"outline"}>Task-Tackler+</Button>
         </Link>
-        <Link href={"/dashboard"}>
-          <Button variant={"outline"}>Dashboard</Button>
-        </Link>
-        <Button variant={"outline"}>Docs</Button>
         <SignedIn>
           <UserButton />
         </SignedIn>

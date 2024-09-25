@@ -14,6 +14,7 @@ import {
   Eye,
   FileSpreadsheet,
   Keyboard,
+  Wind,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { GiBroom } from "react-icons/gi";
@@ -63,7 +64,11 @@ export default function Page() {
     "know-it-all-ninja": [
       {
         icon: <BrainCircuit />,
-        name: "",
+        name: "Auto Answer Questions",
+      },
+      {
+        icon: <Wind />,
+        name: "Skip Tutorial",
       },
     ],
     bedrock: [
