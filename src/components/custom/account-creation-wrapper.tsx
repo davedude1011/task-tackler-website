@@ -10,8 +10,6 @@ export default function AccountCreationWrapper({
   const user = useAuth();
   useEffect(() => {
     createUser().catch((error) => console.log(error));
-
-    console.log("RAN");
   }, [user]);
   return <>{children}</>;
 }
