@@ -12,6 +12,7 @@ export async function POST(req: Request) {
   if (req.method === 'OPTIONS') {
     return new NextResponse(null, { headers });
   }
+  // i need to write something so git can do a push, thanks for reading i guess :-)
 
   const stripeId = await req.text().then(id => id.replace(/"/g, '').trim());
   const subscription = await getSubscriptions(stripeId);
