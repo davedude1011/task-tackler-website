@@ -15,6 +15,10 @@ export default function RootLayout({
     <ClerkProvider>
       <AccountCreationWrapper>
         <html lang="en" className={`${GeistSans.variable}`}>
+          <head>
+            <title>Task-Tackler</title>
+            <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          </head>
           <body>
             <ThemeProvider
               attribute="class"
