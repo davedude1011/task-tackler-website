@@ -12,7 +12,7 @@ export default function App() {
       const base64String = reader.result as string;
 
       try {
-        const res = await fetch("http://localhost:3000/api/upload_image", {
+        const res = await fetch("https://www.task-tackler.com/api/upload_image", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
