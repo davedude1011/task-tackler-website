@@ -58,7 +58,7 @@ export class GauthTapper {
         const uploaded_question_id = await gauth_tapper_create_question(uploaded_image_data, this.get_url_parameters())
         if (!uploaded_question_id) return null
 
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise(resolve => setTimeout(resolve, 2500));
 
         const end_time = Date.now() + 2500 // 2.5 seconds
 
